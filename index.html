@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Space App</title>
+    <!-- Linking external CSS framework template -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Main Navigation / Device Frame Wrapper Container -->
+    <div class="app-container">
+        
+        <!-- Screen 1: Splash Welcome Landing Page -->
+        <section id="splash-screen" class="mobile-frame active">
+            <div class="branding-logo">🌸</div>
+            <h1 class="main-title">Calm Space</h1>
+            <p class="subtitle">Your mental wellness companion</p>
+            <button class="btn btn-primary" onclick="navigateTo('intro-screen')">Go</button>
+        </section>
+
+        <!-- Screen 2: Track How You Feel Intro Page -->
+        <section id="intro-screen" class="mobile-frame">
+            <h2 class="section-title">Track how you feel</h2>
+            <p class="desc-text">Use emotion weather to log your mood in a gentle, visual way every day.</p>
+            <button class="btn btn-primary" onclick="navigateTo('login-screen')">Next →</button>
+            <button class="btn btn-link" onclick="navigateTo('login-screen')">Skip</button>
+        </section>
+
+        <!-- Screen 3: Welcome Back Sign In Page -->
+        <section id="login-screen" class="mobile-frame">
+            <h2 class="section-title">Welcome back</h2>
+            <p class="subtitle-desc">Sign in to continue</p>
+            <input type="email" placeholder="priya@gmail.com" class="form-input">
+            <input type="password" placeholder="••••••••" class="form-input">
+            <a href="#" class="forgot-link">Forgot password?</a>
+            <button class="btn btn-primary" onclick="navigateTo('home-dashboard')">Sign In</button>
+        </section>
+
+        <!-- Screen 4: Home Dashboard Page -->
+        <section id="home-dashboard" class="mobile-frame">
+            <div class="header-greet">
+                <h3>Good morning</h3>
+                <p>How are you today, priya?</p>
+            </div>
+            <!-- Widgets panel grid blueprint layout placeholder -->
+            <div class="feature-grid">
+                <div class="card card-purple" onclick="navigateTo('meditation-audio')">🧘‍♂️ Meditate<br><small>5 min calm</small></div>
+                <div class="card card-orange">📝 Journal<br><small>Write it out</small></div>
+            </div>
+            <button class="btn btn-secondary" onclick="navigateTo('splash-screen')">Logout</button>
+        </section>
+
+    </div>
+
+    <!-- Linking custom interactions controller script -->
+    <script src="./script.js"></script>
+</body>
+</html>
